@@ -1,0 +1,141 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Oleksandr Tkachenko</title>
+        <link media="all" rel="stylesheet" href="css/all.css" type="text/css" />
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/jquery-ui.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.5/angular.min.js"></script>
+        <script type="text/javascript" src="js/app.js"></script>
+        <script type="text/javascript" src="js/controllers/Maincontroller.js"></script>
+        <script type="text/javascript" src="js/directives/skills.js"></script>
+        <script type="text/javascript" src="js/main.js"></script>
+    </head>
+    <body ng-app="resume">
+        <div ng-controller="MainController">
+            <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                            <img src="img/interface.png" alt="Alternate Text" />
+                        </button>
+                        <a class="navbar-brand" href="#">Resume</a>
+                    </div>
+                    <div class="collapse navbar-collapse" id="myNavbar">
+                        <ul class="nav navbar-nav">
+                            <li class="active"><a href="#">Welcome</a></li>
+                            <li><a href="#">Skills</a></li>
+                            <li><a href="#">Contacts</a></li>
+                            <li><a href="#">WORK EXPERIENCE</a></li>
+                            <li><a href="#">Education</a></li>
+                            <li><a href="#">Hobbies</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <div class="container-fluid main">
+                <div class="col-md-2 col-sm-3 col-xs-3 sidebar">
+                    <p>{{name}}</p>
+                    <img class="img-circle" ng-src="{{logo}}" alt="Alternate Text" />
+                    <p>Age: {{age}}</p>
+                    <p>Desired position: {{position}}</p>
+                </div>
+                <div class="col-md-10 col-sm-9 col-xs-9">
+                    <div class="cube">
+                        <div class="red side">
+                            <div class="side-content">
+                                <p>Welcome</p>
+                            </div>
+                        </div>
+                        <div class="green side">
+                            <div class="side-content">
+                                <h2>Skills</h2>
+                                <skills ng-repeat="skill in skills"></skills>
+                            </div>
+                        </div>
+                        <div class="grey side">
+                            <div class="side-content">
+                                <h2>Education</h2>
+                                <div class="place">
+                                    <strong>N.E. ZHUKOVSIY NATIONAL AEROSPACE UNIVERSITY 'KhAI'</strong>
+                                    <p>Economical. ENTERPRISE ECONOMY</p>
+                                    <p>2007 - 2013</p>
+                                </div>
+                                <div class="place">
+                                    <strong>Spalah IT-school</strong>
+                                    <p>HTML/CSS</p>
+                                    <p>March 2016</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="blue side">
+                            <div class="side-content">
+                                <h2>Hobbies</h2>
+                                <ul>
+                                    <li>Football</li>
+                                    <li>Swimming</li>
+                                    <li>Chess</li>
+                                    <li>Coding:)</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="black side">
+                            <div class="side-content">
+                                <h2>Contacts</h2>
+                                <ul>
+                                    <li>skype: agtkachenko</li>
+                                    <li>E-mail: ha100790tag@gmail.com</li>
+                                    <li>phone: +380637436543</li>
+                                    <li><a href="http://vk.com/ha100790tag">VK</a></li>
+                                    <li><a href="https://ua.linkedin.com/in/александр-ткаченко-877ab199">LinkedIn</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="yellow side">
+                            <div class="side-content">
+                                <h2>WORK EXPERIENCE</h2>
+                                <ul class="accordion">
+                                    <li>
+                                        <div class="opener">PJSC COMMERCIAL BANK PRIVATBANK</div>
+                                        <div class="slide">
+                                            <p>Corporate client’s financial manager.</p>
+                                            <p>08.2012 - 02.2016</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="opener">HIGH SIERRA POOLS, ALEXANDRIA, USA</div>
+                                        <div class="slide">
+                                            <p>Pool Manager.</p>
+                                            <p>05.2009 - 11.2010</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="opener">MIDAS TELECOM</div>
+                                        <div class="slide">
+                                            <p>Phone Support.</p>
+                                            <p>08.2008 - 03.2009</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="opener">ALARSOFT</div>
+                                        <div class="slide">
+                                            <p>Sales Manager. Sales Department.</p>
+                                            <p>05.2008 - 08.2008</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="img/CV_Oleksandr_Tkachenko.pdf" class="print">Version for print(.PDF)</a>
+                </div>
+            </div>
+        </div>    
+    </body>
+</html>
